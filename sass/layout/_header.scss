@@ -1,0 +1,20 @@
+.grid {
+    @include grid ;
+}
+.container {
+    @include grid-item (container) ;
+}
+.box-10 {
+    @include width ( $wd-1 + $wd-2 , 1 ) ;
+    @include font ( $ff-ss , $fs-1+2rem , $fw-9 ) ;
+    @include color ( lighten($clr-1,30) , $clr-2 ) ;
+
+    display : grid ;
+    place-items : center ;
+}
+.triangle {
+    @include triangle ( ($wd-1+$wd-2) , $clr-2 , down) ;
+}
+.fonts {
+    @include grid-item ( fonts ) ;  
+}

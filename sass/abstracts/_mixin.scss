@@ -1,0 +1,57 @@
+
+
+@mixin width ( $wdt, $hgt ) {
+    width : $wdt ;
+    height: $hgt ;
+}
+
+@mixin font ( $ff , $fs , $fw ) {
+    font : {
+        family : $ff ;
+        size : $fs;
+        weight : $fw ;
+    }
+}
+
+@mixin color ( $clr , $bg-clr ) {
+    color : $clr ;
+    background-color : $bg-clr ;
+}
+
+@mixin border ( $bw , $bs , $bc , $br ) {
+    border : $bw $bs $bc ;
+    border-radius : $br ;
+}
+
+@mixin grid {
+    display: grid ;
+    grid-template-columns: repeat(100,auto);
+    grid-template-areas: 
+    "container fonts ."
+    ;
+}
+@mixin grid-item ( $area ) {
+    grid-area: $area;
+}
+
+@mixin triangle ( $size , $clr , $direction ) {
+    width : 0 ;
+    height: 0 ;
+    border : $size/2 solid transparent ;
+
+    @if $direction == up {
+        border-bottom-color: $clr ;
+    }
+    @else if $direction == right {
+        border-left-color:  $clr;
+    }
+    @else if $direction == down {
+        border-top-color: $clr ;
+    }
+    @else if $direction == left {
+        border-right-color: $clr ;
+    }
+    /* @else {
+        @error "Unkonwn #{$direction}"
+    } */
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Frontend Mentor</title>
+    <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
+
+    <link rel="stylesheet" type="text/css" href="./css/style.min.css">
+    <link rel="stylesheet" href="https://kit.fontawesome.com/b69fb5b7db.css" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/b69fb5b7db.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    
+    <h1>blackjack</h1>
+    <div class="message-container">
+        <div class="message">Welcome to the Game</div>
+        <div class="confirmBtns hidden">
+            <button class="yesBtn">Yes</button>
+            <button class="noBtn">No</button>
+        </div>
+    </div>
+    <div class="cards">
+        <div class="hisSum"></div>
+        <div class="hisCards"></div>
+        <div class="img-container">
+            <img class="vs-img" src="./image/vs.jpg" alt="">
+            <img class="win-img none" src="./image/win.avif" cla alt="">
+            <img class="lose-img none" src="./image/lose.webp" alt="">
+        </div>
+        <div class="myCards"></div>
+        <div class="mySum"></div>
+    </div>
+    <div class="buttons">
+        <button class="startBtn">Start Game</button>
+        <button class="newCardBtn">New Card</button>
+        <button class="newGameBtn">New Game</button>
+    </div>
+    <div class="player-container">
+        <div class="playerBet"></div>
+        <span class="invalid-bet-amoun-message none" style="color:red;font-weight: 900;">Invalid Bet</span>
+        <button class="try-again-btn none">Try Again</button>
+    </div>
+    
+    <div class="chipsButtons">
+        <button>5$</button>
+        <button>10$</button>
+        <button>20$</button>
+        <button>50$</button>
+        <button>100$</button>
+        <button>200$</button>
+        <button class="betBtn">Bet</button>
+    </div>
+    <div class="playerTotal">Player Name : Total Credit</div>
+    
+    <h2>You wanna play ?</h2>
+
+    <div class="no-credit-left none" style="color:red;font-weight: 900;">You have no credit enough. Please enter some credits</div>
+    <div class="invalid-credit-amount none" style="color:orangered; font-weight: 900;">Its not enough to start the game</div>
+    
+    <div class="name-container">
+        <label for="Name" >Name</label>
+        <input type="text" name="Name" id="nameInput" placeholder="Please Enter Your Name" autofocus>
+    </div>
+    <div class="credit-container">
+        <label for="Credit">Credit</label>
+        <input type="number" name="Credti" id="creditInput" placeholder="Please Enter the Amount" > 
+    </div>
+    <button class="confirmBtn">Confirm</button>
+
+</body>
+<script src="./script/script.js"></script>
+</html>

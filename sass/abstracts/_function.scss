@@ -1,0 +1,21 @@
+
+$sizes : 1,2,3,4 ;
+    @each $size in $sizes {
+        .fs-#{$size}{
+            font-size: #{$size}rem ;
+        }
+    }
+
+@for $value from 1 to 5 {
+    .fs-#{$value} {
+        font-size: #{$value}rem;
+    }
+}
+
+
+
+
+
+
+
+
